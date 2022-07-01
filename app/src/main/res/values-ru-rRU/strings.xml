@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu_profile">Профиль</string>
+    <string name="menu_music">Музыка</string>
+    <string name="app_name">Летняя Практика</string>
+    <string name="menu_video">Видеозаписи</string>
+    <string name="menu_favourites">Избранное</string>
+    <string name="menu_settings">Настройки</string>
+</resources>

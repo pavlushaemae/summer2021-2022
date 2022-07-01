@@ -4,25 +4,25 @@ import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.example.summerpractice.databinding.FragmentFavouritesBinding
+import com.example.summerpractice.databinding.FragmentVideosBinding
 
 
-class FavouritesFragment: Fragment(R.layout.fragment_favourites) {
-    private  var _binding: FragmentFavouritesBinding? = null
+class VideosFragment: Fragment(R.layout.fragment_videos) {
+    private  var _binding: FragmentVideosBinding? = null
     private val binding get() = _binding!!
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        _binding = FragmentFavouritesBinding.bind(view)
+        _binding = FragmentVideosBinding.bind(view)
 
         with(binding){
-            btnFavouritesToTesting.setOnClickListener {
+            btnVideosToTesting.setOnClickListener {
                 val bundle = Bundle()
                 bundle.putString(
                     "ARG_TEXT",
-                    (tvFavouritesFragment.text ?: "Error").toString()
+                    (tvVideosFragment.text ?: "Error").toString()
                 )
-                findNavController().navigate(R.id.action_favouritesFragment_to_testForCatFragment,
-                    bundle)
+                findNavController().navigate(R.id.action_videosFragment_to_testForCatFragment,
+                bundle)
             }
         }
     }

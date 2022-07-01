@@ -5,18 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/background"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
     <TextView
-        android:id="@+id/tv_settings_fragment"
+        android:id="@+id/tv_music_fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SettingsFragment"
+        android:text="MusicFragment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
-        android:id="@+id/btn_settings_to_testing"
+        android:id="@+id/btn_music_to_testing"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:ignore="MissingConstraints"

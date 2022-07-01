@@ -4,116 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
     tools:context=".MainActivity">
 
-    <FrameLayout
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/bottom_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/main_graph"
+        app:defaultNavHost="true"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_view"
+        app:menu="@menu/menu_main"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-    <TextView
-        android:id="@+id/tv_please"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
-        android:text="Пожалуйста, введите следующие данные."
-        android:textSize="18sp"
-        android:textColor="@color/please"
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <TextView
-        android:id="@+id/tv_pleaseOne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Мы посчитаем, насколько Вы любите кошек."
-        android:textColor="@color/please"
-
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_please" />
-
-    <EditText
-        android:id="@+id/et_height"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:textColor="@color/button"
-        android:inputType="number"
-        android:hint="Ваш рост"
-        app:layout_constraintTop_toBottomOf="@+id/et_name"
-        tools:layout_editor_absoluteX="10dp"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/et_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
-        android:ems="10"
-        android:hint="Ваше имя"
-        android:inputType="textPersonName"
-        android:textColor="@color/button"
-        app:layout_constraintTop_toBottomOf="@+id/tv_please"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="10dp" />
-
-    <EditText
-        android:id="@+id/et_weight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:textColor="@color/button"
-        android:inputType="numberDecimal"
-        android:hint="Ваш вес"
-        app:layout_constraintTop_toBottomOf="@+id/et_height"
-        tools:layout_editor_absoluteX="10dp"
-        tools:ignore="MissingConstraints" />
-
-    <EditText
-        android:id="@+id/et_age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:textColor="@color/button"
-        android:inputType="number"
-        android:hint="Сколько Вам лет?"
-        app:layout_constraintTop_toBottomOf="@+id/et_weight"
-        tools:layout_editor_absoluteX="10dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/te_result"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        android:textColor="@color/button"
-        app:layout_constraintBottom_toTopOf="@+id/btn_chponk"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_age"
-        tools:ignore="MissingConstraints"/>
-
-
-    <Button
-        android:id="@+id/btn_chponk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/button"
-        android:text="Сюда тыкать"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_height"
-        app:layout_constraintVertical_bias="0.601" />
+        android:background="@color/bottom"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
